@@ -1,6 +1,7 @@
 from typing import List, Tuple
 from pathlib import Path
 from .loadmodel import cargarModelo
+from .corpus_loader import get_corpus
 import logging
 
 # Configurar logging
@@ -149,6 +150,31 @@ class ModelBrowser:
         logger.debug(f"Tipo después de conversión: {type(result)}, len={len(result) if hasattr(result, '__len__') else 'N/A'}")
         formatted = []
 
+        # Prepare corpus-based filtering: only keep docs whose 'Answer' contains all query tokens
+        corpus = get_corpus()
+        tokens = [t.strip().lower() for t in query.split() if t.strip()]
+
+        def _answer_contains(doc_id: int) -> bool:
+            try:
+                doc = corpus.get_document(int(doc_id))
+                if not doc:
+                    return False
+                # Try common Answer field names
+                answer_text = None
+                for key in ("Answer", "answer"):
+                    if key in doc and isinstance(doc[key], str):
+                        answer_text = doc[key].lower()
+                        break
+                if not answer_text:
+                    return False
+                # Require all tokens to be present in the answer (case-insensitive)
+                for tok in tokens:
+                    if tok not in answer_text:
+                        return False
+                return True
+            except Exception:
+                return False
+
         # Estilo TF-IDF / BM25: lista de tuplas (doc_id, score)
         if isinstance(result, list) and len(result) > 0:
             # Verificar si es lista de tuplas (TF-IDF/BM25)
@@ -157,7 +183,25 @@ class ModelBrowser:
                     # Intentar acceder como tupla
                     _ = result[0][0], result[0][1]
                     logger.debug("Formato detectado: TF-IDF/BM25 (tuplas con scores)")
+                    # Filter by Answer content
+                    filtered = []
                     for item in result:
+                        try:
+                            docid = int(item[0])
+                        except Exception:
+                            continue
+                        if tokens:
+                            if _answer_contains(docid):
+                                filtered.append(item)
+                        else:
+                            # No tokens (empty query tokens?) keep all
+                            filtered.append(item)
+
+                    if not filtered:
+                        logger.debug("No TF-IDF/BM25 results pass Answer-column filtering")
+                        return []
+
+                    for item in filtered:
                         try:
                             docid = item[0]
                             score = item[1]
@@ -172,8 +216,24 @@ class ModelBrowser:
         # Estilo Binary: lista de índices (números)
         logger.debug("Formateando como índices (Binary)")
         try:
+            filtered_ids = []
             for i in result:
-                formatted.append(f"Doc {int(i)}")
+                try:
+                    docid = int(i)
+                except Exception:
+                    continue
+                if tokens:
+                    if _answer_contains(docid):
+                        filtered_ids.append(docid)
+                else:
+                    filtered_ids.append(docid)
+
+            if not filtered_ids:
+                logger.debug("No Binary results pass Answer-column filtering")
+                return []
+
+            for docid in filtered_ids:
+                formatted.append(f"Doc {int(docid)}")
             logger.debug(f"{len(formatted)} resultados formateados (Binary)")
             return formatted
         except Exception as e:

@@ -95,3 +95,170 @@
 2025-12-06 18:18:00,888 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
 2025-12-06 18:18:00,888 - DEBUG - Formateando como índices (Binary)
 2025-12-06 18:18:00,888 - DEBUG - 1079 resultados formateados (Binary)
+2025-12-07 14:34:19,823 - INFO - Loaded CancerQA.csv: 729 documents
+2025-12-07 14:34:19,882 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
+2025-12-07 14:34:19,902 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
+2025-12-07 14:34:19,914 - INFO - Loaded SeniorHealthQA.csv: 769 documents
+2025-12-07 14:34:19,915 - INFO - Corpus loaded successfully: 8078 total documents
+2025-12-07 14:34:19,915 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
+2025-12-07 14:34:20,034 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:34:20,035 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 14:34:20,035 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
+2025-12-07 14:34:20,096 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
+2025-12-07 14:34:20,096 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 14:34:20,097 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
+2025-12-07 14:34:20,097 - DEBUG - Formateando como índices (Binary)
+2025-12-07 14:34:20,097 - DEBUG - 1079 resultados formateados (Binary)
+2025-12-07 14:35:08,649 - INFO - Loaded CancerQA.csv: 729 documents
+2025-12-07 14:35:08,708 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
+2025-12-07 14:35:08,727 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
+2025-12-07 14:35:08,739 - INFO - Loaded SeniorHealthQA.csv: 769 documents
+2025-12-07 14:35:08,740 - INFO - Corpus loaded successfully: 8078 total documents
+2025-12-07 14:35:08,740 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
+2025-12-07 14:35:08,801 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:35:08,801 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 14:35:08,801 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
+2025-12-07 14:35:08,818 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
+2025-12-07 14:35:08,818 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 14:35:08,819 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
+2025-12-07 14:35:08,819 - DEBUG - Formateando como índices (Binary)
+2025-12-07 14:35:08,819 - DEBUG - 1079 resultados formateados (Binary)
+2025-12-07 14:36:59,013 - DEBUG - Using proactor: IocpProactor
+2025-12-07 14:36:59,082 - INFO - Loaded CancerQA.csv: 729 documents
+2025-12-07 14:36:59,139 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
+2025-12-07 14:36:59,157 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
+2025-12-07 14:36:59,169 - INFO - Loaded SeniorHealthQA.csv: 769 documents
+2025-12-07 14:36:59,170 - INFO - Corpus loaded successfully: 8078 total documents
+2025-12-07 14:36:59,170 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
+2025-12-07 14:37:11,800 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:37:11,800 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 14:37:11,800 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
+2025-12-07 14:37:11,814 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
+2025-12-07 14:37:11,814 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 14:37:11,815 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
+2025-12-07 14:37:11,815 - DEBUG - Formateando como índices (Binary)
+2025-12-07 14:37:11,815 - DEBUG - 1079 resultados formateados (Binary)
+2025-12-07 14:49:00,969 - INFO - Loaded CancerQA.csv: 729 documents
+2025-12-07 14:49:01,029 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
+2025-12-07 14:49:01,048 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
+2025-12-07 14:49:01,060 - INFO - Loaded SeniorHealthQA.csv: 769 documents
+2025-12-07 14:49:01,061 - INFO - Corpus loaded successfully: 8078 total documents
+2025-12-07 14:49:01,061 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
+2025-12-07 14:49:01,124 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:49:01,124 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 14:49:01,124 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
+2025-12-07 14:49:01,141 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
+2025-12-07 14:49:01,141 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 14:49:01,141 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
+2025-12-07 14:49:01,141 - DEBUG - Formateando como índices (Binary)
+2025-12-07 14:49:01,164 - DEBUG - 1079 resultados formateados (Binary)
+2025-12-07 14:49:22,127 - INFO - Loaded CancerQA.csv: 729 documents
+2025-12-07 14:49:22,184 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
+2025-12-07 14:49:22,202 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
+2025-12-07 14:49:22,213 - INFO - Loaded SeniorHealthQA.csv: 769 documents
+2025-12-07 14:49:22,214 - INFO - Corpus loaded successfully: 8078 total documents
+2025-12-07 14:49:22,214 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
+2025-12-07 14:49:22,275 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:49:22,275 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 14:49:22,275 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
+2025-12-07 14:49:22,290 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
+2025-12-07 14:49:22,290 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 14:49:22,290 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
+2025-12-07 14:49:22,290 - DEBUG - Formateando como índices (Binary)
+2025-12-07 14:49:22,313 - DEBUG - 1079 resultados formateados (Binary)
+2025-12-07 14:49:39,831 - DEBUG - Using proactor: IocpProactor
+2025-12-07 14:49:39,891 - INFO - Loaded CancerQA.csv: 729 documents
+2025-12-07 14:49:39,947 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
+2025-12-07 14:49:39,966 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
+2025-12-07 14:49:39,977 - INFO - Loaded SeniorHealthQA.csv: 769 documents
+2025-12-07 14:49:39,978 - INFO - Corpus loaded successfully: 8078 total documents
+2025-12-07 14:49:39,978 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
+2025-12-07 14:49:49,802 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:49:49,802 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 14:49:49,803 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
+2025-12-07 14:49:49,825 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
+2025-12-07 14:49:49,825 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 14:49:49,825 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
+2025-12-07 14:49:49,825 - DEBUG - Formateando como índices (Binary)
+2025-12-07 14:49:49,851 - DEBUG - 1079 resultados formateados (Binary)
+2025-12-07 14:53:34,529 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:53:34,529 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 14:53:34,530 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
+2025-12-07 14:53:34,535 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
+2025-12-07 14:53:34,535 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 14:53:34,536 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
+2025-12-07 14:53:34,536 - DEBUG - Formateando como índices (Binary)
+2025-12-07 14:53:34,560 - DEBUG - 1079 resultados formateados (Binary)
+2025-12-07 14:54:13,623 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:54:13,623 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 14:54:13,623 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
+2025-12-07 14:54:13,625 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
+2025-12-07 14:54:13,625 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 14:54:13,625 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
+2025-12-07 14:54:13,625 - DEBUG - Formateando como índices (Binary)
+2025-12-07 14:54:13,653 - DEBUG - 1079 resultados formateados (Binary)
+2025-12-07 14:55:17,545 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:55:17,545 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-07 14:55:17,545 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('cancer', k=5)
+2025-12-07 14:55:17,590 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-07 14:55:17,590 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
+2025-12-07 14:55:17,590 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
+2025-12-07 14:55:17,591 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
+2025-12-07 14:55:38,480 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:55:38,481 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-07 14:55:38,481 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
+2025-12-07 14:55:38,484 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-07 14:55:38,484 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
+2025-12-07 14:55:38,484 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
+2025-12-07 14:55:38,485 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
+2025-12-07 14:55:53,925 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:55:53,925 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-07 14:55:53,925 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('cancer', k=5)
+2025-12-07 14:55:53,959 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-07 14:55:53,959 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
+2025-12-07 14:55:53,959 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
+2025-12-07 14:55:53,960 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
+2025-12-07 14:55:58,363 - DEBUG - Iniciando búsqueda con query: 'cancer'
+2025-12-07 14:55:58,363 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-07 14:55:58,364 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
+2025-12-07 14:55:58,366 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-07 14:55:58,366 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
+2025-12-07 14:55:58,366 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
+2025-12-07 14:55:58,366 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
+2025-12-07 14:57:07,339 - DEBUG - Iniciando búsqueda con query: 'leukemia'
+2025-12-07 14:57:07,339 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 14:57:07,340 - DEBUG - Llamando a ModeloBinario.buscar('leukemia')
+2025-12-07 14:57:07,340 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=171
+2025-12-07 14:57:07,340 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 14:57:07,340 - DEBUG - Tipo después de conversión: <class 'list'>, len=171
+2025-12-07 14:57:07,340 - DEBUG - Formateando como índices (Binary)
+2025-12-07 14:57:07,343 - DEBUG - 171 resultados formateados (Binary)
+2025-12-07 14:57:30,929 - DEBUG - Iniciando búsqueda con query: 'leukemia'
+2025-12-07 14:57:30,929 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-07 14:57:30,929 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('leukemia', k=5)
+2025-12-07 14:57:30,969 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-07 14:57:30,969 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
+2025-12-07 14:57:30,969 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
+2025-12-07 14:57:30,970 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
+2025-12-07 14:58:00,070 - DEBUG - Iniciando búsqueda con query: 'leukemia'
+2025-12-07 14:58:00,071 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-07 14:58:00,071 - DEBUG - Llamando a ModeloBM25.buscar('leukemia', k=5)
+2025-12-07 14:58:00,074 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-07 14:58:00,074 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
+2025-12-07 14:58:00,075 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
+2025-12-07 14:58:00,075 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
+2025-12-07 15:18:36,839 - DEBUG - Using proactor: IocpProactor
+2025-12-07 15:18:36,898 - INFO - Loaded CancerQA.csv: 729 documents
+2025-12-07 15:18:36,954 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
+2025-12-07 15:18:36,972 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
+2025-12-07 15:18:36,983 - INFO - Loaded SeniorHealthQA.csv: 769 documents
+2025-12-07 15:18:36,984 - INFO - Corpus loaded successfully: 8078 total documents
+2025-12-07 15:18:36,985 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
+2025-12-07 15:18:43,993 - DEBUG - Iniciando búsqueda con query: 'leukemia'
+2025-12-07 15:18:43,993 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-07 15:18:43,993 - DEBUG - Llamando a ModeloBinario.buscar('leukemia')
+2025-12-07 15:18:44,016 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=171
+2025-12-07 15:18:44,016 - DEBUG - Convirtiendo numpy array a lista
+2025-12-07 15:18:44,017 - DEBUG - Tipo después de conversión: <class 'list'>, len=171
+2025-12-07 15:18:44,017 - DEBUG - Formateando como índices (Binary)
+2025-12-07 15:18:44,022 - DEBUG - 171 resultados formateados (Binary)

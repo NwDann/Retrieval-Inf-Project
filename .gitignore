@@ -1,2 +1,22 @@
 env
 models
+
+# Archivos de depuración
+debug.log
+*.log
+test_corpus.py
+test_integration.py
+test_models.py
+validate.py
+
+# Caché de Python
+__pycache__/
+*.pyc
+*.pyo
+
+# IDE
+.vscode/
+.idea/
+
+# Documetos que forman parte del corpus
+docs
