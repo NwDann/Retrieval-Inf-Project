@@ -1,264 +1,387 @@
-2025-12-06 18:03:21,116 - DEBUG - Using proactor: IocpProactor
-2025-12-06 18:03:31,437 - DEBUG - Iniciando búsqueda con query: 'test'
-2025-12-06 18:03:31,437 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-06 18:03:31,437 - DEBUG - Llamando a ModeloBinario.buscar('test')
-2025-12-06 18:03:31,459 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, contenido=[   3    5    6    7   11   13   14   15   19   22   23   31   33   34
-   35   39   41   42   43   45   48   49   62   63   67   71   72   76
-   79   80   87   91   93   94   95   98  100  101  102  107  110  111
-  117  118  122  125  126  130  133  134  138  141  142  149  150  158
-  159  160  164  166  168  172  175  176  179  181  185  187  188  189
-  196  198  199  200  202  204  222  223  227  230  231  235  237  239
-  243  245  246  250  253  254  258  261  262  269  272  275  276  281
-  284  285  293  294  295  296  297  300  303  304  307  310  315  318
-  319  324  325  326  330  333  334  341  342  346  347  350  353  357
-  360  361  365  368  369  372  375  376  380  383  384  387  388  395
-  396  403  404  409  412  413  416  419  420  428  430  432  435  437
-  438  447  449  450  453  456  457  464  465  469  471  473  477  479
-  480  490  493  494  497  499  501  505  507  508  513  516  517  529
-  532  533  535  543  546  547  553  555  557  560  562  563  564  567
-  568  572  575  576  580  582  584  586  587  588  596  597  604  605
-  609  612  613  617  620  621  622  623  624  625  630  633  636  640
-  642  649  652  653  655  661  669  670  674  677  678  682  685  686
-  692  695  696  698  702  703  709  710  712  713  716  719  720  724
-  727  728  762  873  891  958 1020 1085 1123 1155 1217 1308 1321 1339
- 1405 1475 1579 1614 1645 1678 1775 1825 1941 1967 2011 2055 2085 2113
- 2146 2199 2206 2268 2300 2344 2389 2565 2612 2671 2686 2928 2954 2978
- 3022 3076 3126 3256 3278 3410 3560 3603 3624 3673 3682 3709 3730 3783
- 3784 3813 3864 3951 4065 4252 4268 4388 4512 4539 4570 4578 4644 4703
- 4719 4753 4830 4920 4921 4931 4950 5052 5070 5099 5142 5207 5236 5265
- 5295 5307 5410 5450 5500 5513 5750 5809 5812 5840 5930 5933 5956 5988
- 6113 6123 6132 6142 6146 6152 6153 6160 6168 6185 6192 6203 6204 6205
- 6210 6212 6222 6223 6225 6231 6234 6240 6241 6253 6266 6268 6270 6278
- 6286 6289 6296 6298 6309 6310 6323 6360 6384 6397 6403 6412 6419 6422
- 6438 6439 6440 6446 6447 6455 6474 6482 6501 6511 6512 6518 6527 6537
- 6545 6553 6583 6584 6599 6609 6619 6627 6633 6634 6643 6652 6659 6669
- 6673 6683 6693 6703 6712 6713 6722 6736 6737 6738 6744 6751 6755 6763
- 6769 6772 6788 6800 6810 6829 6849 6860 6862 6866 6867 6870 6872 6879
- 6886 6896 6905 6913 6921 6923 6932 6952 6956 6960 6969 6972 6981 6989
- 7009 7010 7018 7029 7030 7032 7035 7036 7039 7044 7045 7069 7070 7083
- 7086 7107 7108 7110 7117 7121 7133 7137 7140 7144 7151 7159 7168 7178
- 7179 7187 7201 7217 7225 7226 7228 7230 7231 7240 7244 7250 7254 7267
- 7270 7293 7296 7311 7330 7351 7356 7363 7364 7367 7394 7402 7435 7443
- 7446 7455 7456 7457 7476 7481 7489 7490 7493 7511 7512 7515 7526 7527
- 7537 7547 7563 7579 7584 7595 7597 7620 7627 7634 7655 7657 7669 7677
- 7700 7709 7723 7724 7734 7740 7745 7768 7776 7782 7789 7803 7808 7811
- 7818 7851 7856 7877 7895 7898 7917 7930 7931 7946 7955 7956 7964 7974
- 7988 8004 8019 8021 8031 8047 8048]
-2025-12-06 18:03:31,462 - DEBUG - Formateando resultados
-2025-12-06 18:03:31,462 - DEBUG - Formateando como índices (Binary)
-2025-12-06 18:03:31,462 - DEBUG - 581 resultados formateados
-2025-12-06 18:07:07,092 - DEBUG - Using proactor: IocpProactor
-2025-12-06 18:07:13,523 - DEBUG - Iniciando búsqueda con query: 'test'
-2025-12-06 18:07:13,523 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-06 18:07:13,523 - DEBUG - Llamando a ModeloBinario.buscar('test')
-2025-12-06 18:07:13,542 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=581
-2025-12-06 18:07:13,543 - DEBUG - Convirtiendo numpy array a lista
-2025-12-06 18:07:13,543 - DEBUG - Tipo después de conversión: <class 'list'>, len=581
-2025-12-06 18:07:13,543 - DEBUG - Formateando como índices (Binary)
-2025-12-06 18:07:13,543 - DEBUG - 581 resultados formateados (Binary)
-2025-12-06 18:07:35,501 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-06 18:07:35,501 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-06 18:07:35,501 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-06 18:07:35,502 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-06 18:07:35,502 - DEBUG - Convirtiendo numpy array a lista
-2025-12-06 18:07:35,502 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-06 18:07:35,502 - DEBUG - Formateando como índices (Binary)
-2025-12-06 18:07:35,502 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-06 18:12:53,809 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-06 18:12:53,809 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
-2025-12-06 18:12:53,809 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('cancer', k=5)
-2025-12-06 18:12:53,863 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
-2025-12-06 18:12:53,863 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
-2025-12-06 18:12:53,864 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
-2025-12-06 18:12:53,864 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
-2025-12-06 18:13:35,412 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-06 18:13:35,412 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
-2025-12-06 18:13:35,412 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('cancer', k=5)
-2025-12-06 18:13:35,441 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
-2025-12-06 18:13:35,441 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
-2025-12-06 18:13:35,441 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
-2025-12-06 18:13:35,441 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
-2025-12-06 18:15:53,972 - DEBUG - Using proactor: IocpProactor
-2025-12-06 18:16:58,127 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-06 18:16:58,127 - DEBUG - Modelo en uso: ModeloBM25
-2025-12-06 18:16:58,127 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
-2025-12-06 18:16:58,153 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
-2025-12-06 18:16:58,153 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
-2025-12-06 18:16:58,153 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
-2025-12-06 18:16:58,154 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
-2025-12-06 18:17:40,921 - DEBUG - Using proactor: IocpProactor
-2025-12-06 18:18:00,866 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-06 18:18:00,867 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-06 18:18:00,867 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-06 18:18:00,887 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-06 18:18:00,887 - DEBUG - Convirtiendo numpy array a lista
-2025-12-06 18:18:00,888 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-06 18:18:00,888 - DEBUG - Formateando como índices (Binary)
-2025-12-06 18:18:00,888 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-07 14:34:19,823 - INFO - Loaded CancerQA.csv: 729 documents
-2025-12-07 14:34:19,882 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
-2025-12-07 14:34:19,902 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
-2025-12-07 14:34:19,914 - INFO - Loaded SeniorHealthQA.csv: 769 documents
-2025-12-07 14:34:19,915 - INFO - Corpus loaded successfully: 8078 total documents
-2025-12-07 14:34:19,915 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
-2025-12-07 14:34:20,034 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:34:20,035 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 14:34:20,035 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-07 14:34:20,096 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-07 14:34:20,096 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 14:34:20,097 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-07 14:34:20,097 - DEBUG - Formateando como índices (Binary)
-2025-12-07 14:34:20,097 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-07 14:35:08,649 - INFO - Loaded CancerQA.csv: 729 documents
-2025-12-07 14:35:08,708 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
-2025-12-07 14:35:08,727 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
-2025-12-07 14:35:08,739 - INFO - Loaded SeniorHealthQA.csv: 769 documents
-2025-12-07 14:35:08,740 - INFO - Corpus loaded successfully: 8078 total documents
-2025-12-07 14:35:08,740 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
-2025-12-07 14:35:08,801 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:35:08,801 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 14:35:08,801 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-07 14:35:08,818 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-07 14:35:08,818 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 14:35:08,819 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-07 14:35:08,819 - DEBUG - Formateando como índices (Binary)
-2025-12-07 14:35:08,819 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-07 14:36:59,013 - DEBUG - Using proactor: IocpProactor
-2025-12-07 14:36:59,082 - INFO - Loaded CancerQA.csv: 729 documents
-2025-12-07 14:36:59,139 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
-2025-12-07 14:36:59,157 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
-2025-12-07 14:36:59,169 - INFO - Loaded SeniorHealthQA.csv: 769 documents
-2025-12-07 14:36:59,170 - INFO - Corpus loaded successfully: 8078 total documents
-2025-12-07 14:36:59,170 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
-2025-12-07 14:37:11,800 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:37:11,800 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 14:37:11,800 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-07 14:37:11,814 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-07 14:37:11,814 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 14:37:11,815 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-07 14:37:11,815 - DEBUG - Formateando como índices (Binary)
-2025-12-07 14:37:11,815 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-07 14:49:00,969 - INFO - Loaded CancerQA.csv: 729 documents
-2025-12-07 14:49:01,029 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
-2025-12-07 14:49:01,048 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
-2025-12-07 14:49:01,060 - INFO - Loaded SeniorHealthQA.csv: 769 documents
-2025-12-07 14:49:01,061 - INFO - Corpus loaded successfully: 8078 total documents
-2025-12-07 14:49:01,061 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
-2025-12-07 14:49:01,124 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:49:01,124 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 14:49:01,124 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-07 14:49:01,141 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-07 14:49:01,141 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 14:49:01,141 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-07 14:49:01,141 - DEBUG - Formateando como índices (Binary)
-2025-12-07 14:49:01,164 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-07 14:49:22,127 - INFO - Loaded CancerQA.csv: 729 documents
-2025-12-07 14:49:22,184 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
-2025-12-07 14:49:22,202 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
-2025-12-07 14:49:22,213 - INFO - Loaded SeniorHealthQA.csv: 769 documents
-2025-12-07 14:49:22,214 - INFO - Corpus loaded successfully: 8078 total documents
-2025-12-07 14:49:22,214 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
-2025-12-07 14:49:22,275 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:49:22,275 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 14:49:22,275 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-07 14:49:22,290 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-07 14:49:22,290 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 14:49:22,290 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-07 14:49:22,290 - DEBUG - Formateando como índices (Binary)
-2025-12-07 14:49:22,313 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-07 14:49:39,831 - DEBUG - Using proactor: IocpProactor
-2025-12-07 14:49:39,891 - INFO - Loaded CancerQA.csv: 729 documents
-2025-12-07 14:49:39,947 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
-2025-12-07 14:49:39,966 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
-2025-12-07 14:49:39,977 - INFO - Loaded SeniorHealthQA.csv: 769 documents
-2025-12-07 14:49:39,978 - INFO - Corpus loaded successfully: 8078 total documents
-2025-12-07 14:49:39,978 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
-2025-12-07 14:49:49,802 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:49:49,802 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 14:49:49,803 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-07 14:49:49,825 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-07 14:49:49,825 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 14:49:49,825 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-07 14:49:49,825 - DEBUG - Formateando como índices (Binary)
-2025-12-07 14:49:49,851 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-07 14:53:34,529 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:53:34,529 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 14:53:34,530 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-07 14:53:34,535 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-07 14:53:34,535 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 14:53:34,536 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-07 14:53:34,536 - DEBUG - Formateando como índices (Binary)
-2025-12-07 14:53:34,560 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-07 14:54:13,623 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:54:13,623 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 14:54:13,623 - DEBUG - Llamando a ModeloBinario.buscar('cancer')
-2025-12-07 14:54:13,625 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=1079
-2025-12-07 14:54:13,625 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 14:54:13,625 - DEBUG - Tipo después de conversión: <class 'list'>, len=1079
-2025-12-07 14:54:13,625 - DEBUG - Formateando como índices (Binary)
-2025-12-07 14:54:13,653 - DEBUG - 1079 resultados formateados (Binary)
-2025-12-07 14:55:17,545 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:55:17,545 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
-2025-12-07 14:55:17,545 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('cancer', k=5)
-2025-12-07 14:55:17,590 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
-2025-12-07 14:55:17,590 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
-2025-12-07 14:55:17,590 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
-2025-12-07 14:55:17,591 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
-2025-12-07 14:55:38,480 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:55:38,481 - DEBUG - Modelo en uso: ModeloBM25
-2025-12-07 14:55:38,481 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
-2025-12-07 14:55:38,484 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
-2025-12-07 14:55:38,484 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
-2025-12-07 14:55:38,484 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
-2025-12-07 14:55:38,485 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
-2025-12-07 14:55:53,925 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:55:53,925 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
-2025-12-07 14:55:53,925 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('cancer', k=5)
-2025-12-07 14:55:53,959 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
-2025-12-07 14:55:53,959 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
-2025-12-07 14:55:53,959 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
-2025-12-07 14:55:53,960 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
-2025-12-07 14:55:58,363 - DEBUG - Iniciando búsqueda con query: 'cancer'
-2025-12-07 14:55:58,363 - DEBUG - Modelo en uso: ModeloBM25
-2025-12-07 14:55:58,364 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
-2025-12-07 14:55:58,366 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
-2025-12-07 14:55:58,366 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
-2025-12-07 14:55:58,366 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
-2025-12-07 14:55:58,366 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
-2025-12-07 14:57:07,339 - DEBUG - Iniciando búsqueda con query: 'leukemia'
-2025-12-07 14:57:07,339 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 14:57:07,340 - DEBUG - Llamando a ModeloBinario.buscar('leukemia')
-2025-12-07 14:57:07,340 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=171
-2025-12-07 14:57:07,340 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 14:57:07,340 - DEBUG - Tipo después de conversión: <class 'list'>, len=171
-2025-12-07 14:57:07,340 - DEBUG - Formateando como índices (Binary)
-2025-12-07 14:57:07,343 - DEBUG - 171 resultados formateados (Binary)
-2025-12-07 14:57:30,929 - DEBUG - Iniciando búsqueda con query: 'leukemia'
-2025-12-07 14:57:30,929 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
-2025-12-07 14:57:30,929 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('leukemia', k=5)
-2025-12-07 14:57:30,969 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
-2025-12-07 14:57:30,969 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
-2025-12-07 14:57:30,969 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
-2025-12-07 14:57:30,970 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
-2025-12-07 14:58:00,070 - DEBUG - Iniciando búsqueda con query: 'leukemia'
-2025-12-07 14:58:00,071 - DEBUG - Modelo en uso: ModeloBM25
-2025-12-07 14:58:00,071 - DEBUG - Llamando a ModeloBM25.buscar('leukemia', k=5)
-2025-12-07 14:58:00,074 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
-2025-12-07 14:58:00,074 - DEBUG - Tipo después de conversión: <class 'list'>, len=5
-2025-12-07 14:58:00,075 - DEBUG - Formato detectado: TF-IDF/BM25 (tuplas con scores)
-2025-12-07 14:58:00,075 - DEBUG - 5 resultados formateados (TF-IDF/BM25)
-2025-12-07 15:18:36,839 - DEBUG - Using proactor: IocpProactor
-2025-12-07 15:18:36,898 - INFO - Loaded CancerQA.csv: 729 documents
-2025-12-07 15:18:36,954 - INFO - Loaded Genetic_and_Rare_DiseasesQA.csv: 5388 documents
-2025-12-07 15:18:36,972 - INFO - Loaded Diabetes_and_Digestive_and_Kidney_DiseasesQA.csv: 1192 documents
-2025-12-07 15:18:36,983 - INFO - Loaded SeniorHealthQA.csv: 769 documents
-2025-12-07 15:18:36,984 - INFO - Corpus loaded successfully: 8078 total documents
-2025-12-07 15:18:36,985 - DEBUG - Corpus columns: ['Question', 'Answer', 'topic', 'split']
-2025-12-07 15:18:43,993 - DEBUG - Iniciando búsqueda con query: 'leukemia'
-2025-12-07 15:18:43,993 - DEBUG - Modelo en uso: ModeloBinario
-2025-12-07 15:18:43,993 - DEBUG - Llamando a ModeloBinario.buscar('leukemia')
-2025-12-07 15:18:44,016 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=171
-2025-12-07 15:18:44,016 - DEBUG - Convirtiendo numpy array a lista
-2025-12-07 15:18:44,017 - DEBUG - Tipo después de conversión: <class 'list'>, len=171
-2025-12-07 15:18:44,017 - DEBUG - Formateando como índices (Binary)
-2025-12-07 15:18:44,022 - DEBUG - 171 resultados formateados (Binary)
+2025-12-08 22:06:02,682 - DEBUG - Using proactor: IocpProactor
+2025-12-08 22:06:03,042 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-08 22:06:03,042 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-08 22:06:25,967 - INFO - Modelo cargado: ModeloBinario
+2025-12-08 22:06:30,880 - DEBUG - Iniciando búsqueda con consulta: 'leukemia' y k=5
+2025-12-08 22:06:30,880 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 22:06:30,880 - DEBUG - Llamando a ModeloBinario.buscar('leukemia', k=5)
+2025-12-08 22:06:30,880 - ERROR - Error al ejecutar la búsqueda en ModeloBinario: ModeloBinario.buscar() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "C:\Users\Hp\Documents\GitHub\Retrieval-Inf-Project\controllers\browser_integration.py", line 135, in buscar
+    resultado = self.modelo.buscar(consulta, k)
+TypeError: ModeloBinario.buscar() takes 2 positional arguments but 3 were given
+2025-12-08 22:06:38,034 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-08 22:06:38,034 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 22:06:38,035 - DEBUG - Llamando a ModeloBinario.buscar('cancer', k=5)
+2025-12-08 22:06:38,035 - ERROR - Error al ejecutar la búsqueda en ModeloBinario: ModeloBinario.buscar() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "C:\Users\Hp\Documents\GitHub\Retrieval-Inf-Project\controllers\browser_integration.py", line 135, in buscar
+    resultado = self.modelo.buscar(consulta, k)
+TypeError: ModeloBinario.buscar() takes 2 positional arguments but 3 were given
+2025-12-08 22:06:40,233 - INFO - Modelo cargado: ModeloBM25
+2025-12-08 22:06:42,178 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-08 22:06:42,178 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-08 22:06:42,178 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
+2025-12-08 22:06:42,363 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 22:06:42,363 - DEBUG - Formato: TF-IDF/BM25 (Lista de Tuplas con Scores)
+2025-12-08 22:06:42,365 - DEBUG - 5 resultados finales formateados.
+2025-12-08 22:07:17,042 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-08 22:07:17,042 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-08 22:07:17,042 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
+2025-12-08 22:07:17,046 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 22:07:17,046 - DEBUG - Formato: TF-IDF/BM25 (Lista de Tuplas con Scores)
+2025-12-08 22:07:17,047 - DEBUG - 5 resultados finales formateados.
+2025-12-08 22:17:45,337 - DEBUG - Using proactor: IocpProactor
+2025-12-08 22:17:45,583 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-08 22:17:45,583 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-08 22:17:48,137 - INFO - Modelo cargado: ModeloBinario
+2025-12-08 22:17:52,567 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-08 22:17:52,568 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 22:17:52,568 - DEBUG - Llamando a ModeloBinario.buscar('cancer', k=5)
+2025-12-08 22:17:52,568 - ERROR - Error al ejecutar la búsqueda en ModeloBinario: ModeloBinario.buscar() takes 2 positional arguments but 3 were given
+Traceback (most recent call last):
+  File "C:\Users\Hp\Documents\GitHub\Retrieval-Inf-Project\controllers\browser_integration.py", line 135, in buscar
+    resultado = self.modelo.buscar(consulta, k)
+TypeError: ModeloBinario.buscar() takes 2 positional arguments but 3 were given
+2025-12-08 22:23:25,801 - DEBUG - Using proactor: IocpProactor
+2025-12-08 22:23:26,067 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-08 22:23:26,067 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-08 22:23:27,406 - INFO - Modelo cargado: ModeloBinario
+2025-12-08 22:23:31,022 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-08 22:23:31,022 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 22:23:31,023 - DEBUG - Llamando a ModeloBinario.buscar('cancer', k=5)
+2025-12-08 22:23:31,068 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-08 22:23:31,069 - DEBUG - Formato: Modelo Binario (Lista de IDs)
+2025-12-08 22:23:31,071 - DEBUG - 5 resultados finales formateados.
+2025-12-08 22:27:08,767 - INFO - Modelo cargado: ModeloVectorialTfIdf
+2025-12-08 22:27:10,351 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-08 22:27:10,351 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 22:27:10,351 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('cancer', k=5)
+2025-12-08 22:27:10,408 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 22:27:10,408 - DEBUG - Formato: TF-IDF/BM25 (Lista de Tuplas con Scores)
+2025-12-08 22:27:10,409 - DEBUG - 5 resultados finales formateados.
+2025-12-08 22:27:18,560 - INFO - Modelo cargado: ModeloBM25
+2025-12-08 22:27:19,789 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-08 22:27:19,789 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-08 22:27:19,789 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
+2025-12-08 22:27:19,793 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 22:27:19,793 - DEBUG - Formato: TF-IDF/BM25 (Lista de Tuplas con Scores)
+2025-12-08 22:27:19,793 - DEBUG - 5 resultados finales formateados.
+2025-12-08 22:27:50,328 - DEBUG - Iniciando búsqueda con consulta: 'leukemia' y k=5
+2025-12-08 22:27:50,329 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-08 22:27:50,329 - DEBUG - Llamando a ModeloBM25.buscar('leukemia', k=5)
+2025-12-08 22:27:50,332 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 22:27:50,332 - DEBUG - Formato: TF-IDF/BM25 (Lista de Tuplas con Scores)
+2025-12-08 22:27:50,333 - DEBUG - 5 resultados finales formateados.
+2025-12-08 22:52:59,621 - DEBUG - Using proactor: IocpProactor
+2025-12-08 22:52:59,859 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-08 22:52:59,859 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-08 22:53:02,692 - INFO - Modelo cargado: ModeloBinario
+2025-12-08 22:53:05,973 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-08 22:53:05,973 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 22:53:05,973 - DEBUG - Llamando a ModeloBinario.buscar('cancer', k=5)
+2025-12-08 22:53:06,016 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-08 22:53:06,016 - DEBUG - Formato: Modelo Binario (Lista de IDs)
+2025-12-08 22:53:06,017 - DEBUG - 5 resultados finales formateados.
+2025-12-08 22:53:24,605 - DEBUG - Iniciando búsqueda con consulta: 'leukemia' y k=5
+2025-12-08 22:53:24,605 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 22:53:24,606 - DEBUG - Llamando a ModeloBinario.buscar('leukemia', k=5)
+2025-12-08 22:53:24,606 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-08 22:53:24,606 - DEBUG - Formato: Modelo Binario (Lista de IDs)
+2025-12-08 22:53:24,607 - DEBUG - 5 resultados finales formateados.
+2025-12-08 22:53:44,753 - INFO - Modelo cargado: ModeloVectorialTfIdf
+2025-12-08 22:53:46,438 - DEBUG - Iniciando búsqueda con consulta: 'leukemia' y k=5
+2025-12-08 22:53:46,439 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 22:53:46,439 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('leukemia', k=5)
+2025-12-08 22:53:46,579 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 22:53:46,580 - DEBUG - Formato: TF-IDF/BM25 (Lista de Tuplas con Scores)
+2025-12-08 22:53:46,580 - DEBUG - 5 resultados finales formateados.
+2025-12-08 22:53:53,159 - INFO - Modelo cargado: ModeloBM25
+2025-12-08 22:53:54,160 - DEBUG - Iniciando búsqueda con consulta: 'leukemia' y k=5
+2025-12-08 22:53:54,160 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-08 22:53:54,160 - DEBUG - Llamando a ModeloBM25.buscar('leukemia', k=5)
+2025-12-08 22:53:54,165 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 22:53:54,165 - DEBUG - Formato: TF-IDF/BM25 (Lista de Tuplas con Scores)
+2025-12-08 22:53:54,165 - DEBUG - 5 resultados finales formateados.
+2025-12-08 23:43:40,011 - DEBUG - Using proactor: IocpProactor
+2025-12-08 23:43:40,274 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-08 23:43:40,275 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-08 23:43:40,275 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-08 23:43:52,037 - INFO - Modelo cargado: ModeloBM25
+2025-12-08 23:44:01,663 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Medicare and Continuing Care' y k=5
+2025-12-08 23:44:01,663 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-08 23:44:01,663 - DEBUG - Llamando a ModeloBM25.buscar('What is (are) Medicare and Continuing Care', k=5)
+2025-12-08 23:44:01,791 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:44:01,792 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:44:23,294 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Medicare and Continuing Care' y k=5
+2025-12-08 23:44:23,294 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-08 23:44:23,294 - DEBUG - Llamando a ModeloBM25.buscar('What is (are) Medicare and Continuing Care', k=5)
+2025-12-08 23:44:23,303 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:44:23,303 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:44:34,405 - INFO - Modelo cargado: ModeloBinario
+2025-12-08 23:44:38,276 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Medicare and Continuing Care' y k=5
+2025-12-08 23:44:38,276 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 23:44:38,276 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) Medicare and Continuing Care', k=5)
+2025-12-08 23:44:38,290 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=0
+2025-12-08 23:44:44,822 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Parkinson's Disease' y k=5
+2025-12-08 23:44:44,822 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 23:44:44,822 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) Parkinson's Disease', k=5)
+2025-12-08 23:44:44,823 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-08 23:44:44,824 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:44:52,907 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Stroke' y k=5
+2025-12-08 23:44:52,907 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 23:44:52,907 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) Stroke', k=5)
+2025-12-08 23:44:52,908 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-08 23:44:52,909 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:45:04,878 - INFO - Modelo cargado: ModeloVectorialTfIdf
+2025-12-08 23:45:10,466 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis' y k=5
+2025-12-08 23:45:10,467 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:45:10,467 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis', k=5)
+2025-12-08 23:45:10,593 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:45:10,594 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:45:16,872 - INFO - Modelo cargado: ModeloBM25
+2025-12-08 23:45:25,520 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis' y k=5
+2025-12-08 23:45:25,520 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-08 23:45:25,520 - DEBUG - Llamando a ModeloBM25.buscar('What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis', k=5)
+2025-12-08 23:45:25,526 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:45:25,526 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:49:05,987 - INFO - Modelo cargado: ModeloVectorialTfIdf
+2025-12-08 23:49:09,091 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis' y k=5
+2025-12-08 23:49:09,091 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:49:09,091 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis', k=5)
+2025-12-08 23:49:09,142 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:49:09,143 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:49:13,617 - INFO - Modelo cargado: ModeloBinario
+2025-12-08 23:49:15,646 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis' y k=5
+2025-12-08 23:49:15,646 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 23:49:15,646 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis', k=5)
+2025-12-08 23:49:15,647 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-08 23:49:15,648 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:49:24,398 - INFO - Modelo cargado: ModeloVectorialTfIdf
+2025-12-08 23:49:27,026 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis' y k=5
+2025-12-08 23:49:27,026 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:49:27,026 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis', k=5)
+2025-12-08 23:49:27,078 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:49:27,078 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:54:30,178 - DEBUG - Using proactor: IocpProactor
+2025-12-08 23:54:30,500 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-08 23:54:30,500 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-08 23:54:30,500 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-08 23:54:34,926 - INFO - Modelo cargado: ModeloBinario
+2025-12-08 23:54:43,364 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-08 23:54:43,364 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-08 23:54:43,364 - DEBUG - Llamando a ModeloBinario.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-08 23:54:43,561 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-08 23:54:43,562 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:55:10,649 - INFO - Modelo cargado: ModeloVectorialTfIdf
+2025-12-08 23:55:13,658 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-08 23:55:13,658 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:55:13,658 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-08 23:55:13,798 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:55:13,799 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:55:21,924 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-08 23:55:21,924 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:55:21,924 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-08 23:55:22,038 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:55:22,039 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:55:26,305 - INFO - Modelo cargado: ModeloBM25
+2025-12-08 23:55:28,349 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-08 23:55:28,349 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-08 23:55:28,349 - DEBUG - Llamando a ModeloBM25.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-08 23:55:28,371 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:55:28,372 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:55:39,457 - INFO - Modelo cargado: ModeloVectorialTfIdf
+2025-12-08 23:55:44,042 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-08 23:55:44,042 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:55:44,042 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-08 23:55:44,157 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:55:44,157 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:55:49,833 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Colorectal Cancer' y k=5
+2025-12-08 23:55:49,833 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:55:49,834 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) Colorectal Cancer', k=5)
+2025-12-08 23:55:49,948 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:55:49,948 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:55:56,885 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) High Blood Cholesterol' y k=5
+2025-12-08 23:55:56,885 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:55:56,885 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) High Blood Cholesterol', k=5)
+2025-12-08 23:55:56,998 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:55:56,999 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:56:03,844 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Breast Cancer' y k=5
+2025-12-08 23:56:03,844 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:56:03,844 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What are the treatments for Breast Cancer', k=5)
+2025-12-08 23:56:03,957 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:56:03,958 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:56:09,206 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-08 23:56:09,207 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:56:09,207 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-08 23:56:09,320 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:56:09,321 - DEBUG - 7 líneas finales formateadas.
+2025-12-08 23:56:13,812 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Colorectal Cancer' y k=5
+2025-12-08 23:56:13,813 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-08 23:56:13,813 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) Colorectal Cancer', k=5)
+2025-12-08 23:56:13,925 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-08 23:56:13,926 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 00:06:32,714 - DEBUG - Using proactor: IocpProactor
+2025-12-09 00:08:01,440 - DEBUG - Using proactor: IocpProactor
+2025-12-09 00:08:27,320 - DEBUG - Using proactor: IocpProactor
+2025-12-09 00:13:21,299 - DEBUG - Using proactor: IocpProactor
+2025-12-09 00:13:53,577 - DEBUG - Using proactor: IocpProactor
+2025-12-09 00:15:25,134 - DEBUG - Using proactor: IocpProactor
+2025-12-09 00:15:46,973 - DEBUG - Using proactor: IocpProactor
+2025-12-09 00:15:47,273 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-09 00:15:47,273 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-09 00:15:47,273 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-09 00:16:04,350 - INFO - Modelo cargado: ModeloBM25
+2025-12-09 00:16:08,541 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-09 00:16:08,541 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 00:16:08,541 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
+2025-12-09 00:16:08,578 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 00:16:08,579 - DEBUG - 6 líneas finales formateadas.
+2025-12-09 00:16:29,521 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=10
+2025-12-09 00:16:29,521 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 00:16:29,521 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=10)
+2025-12-09 00:16:29,526 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=10
+2025-12-09 00:16:29,526 - DEBUG - 11 líneas finales formateadas.
+2025-12-09 00:16:35,619 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-09 00:16:35,619 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 00:16:35,619 - DEBUG - Llamando a ModeloBM25.buscar('cancer', k=5)
+2025-12-09 00:16:35,622 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 00:16:35,623 - DEBUG - 6 líneas finales formateadas.
+2025-12-09 19:44:58,911 - DEBUG - Using proactor: IocpProactor
+2025-12-09 19:44:59,184 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-09 19:44:59,184 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-09 19:44:59,184 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-09 19:48:36,029 - DEBUG - Using proactor: IocpProactor
+2025-12-09 19:48:36,313 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-09 19:48:36,313 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-09 19:48:36,313 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-09 19:48:51,136 - INFO - Modelo cargado: ModeloBM25
+2025-12-09 19:48:52,757 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-09 19:48:52,757 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 19:48:52,757 - DEBUG - Llamando a ModeloBM25.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-09 19:48:52,809 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 19:48:52,810 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 19:49:00,596 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-09 19:49:00,596 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 19:49:00,596 - DEBUG - Llamando a ModeloBM25.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-09 19:49:00,601 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 19:49:00,602 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 19:49:06,967 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis' y k=5
+2025-12-09 19:49:06,968 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 19:49:06,968 - DEBUG - Llamando a ModeloBM25.buscar('What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis', k=5)
+2025-12-09 19:49:06,974 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 19:49:06,975 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 19:49:13,557 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis' y k=6
+2025-12-09 19:49:13,558 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 19:49:13,558 - DEBUG - Llamando a ModeloBM25.buscar('What is (are) Kidney Failure: Eat Right to Feel Right on Hemodialysis', k=6)
+2025-12-09 19:49:13,564 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=6
+2025-12-09 19:49:13,565 - DEBUG - 8 líneas finales formateadas.
+2025-12-09 19:50:05,441 - DEBUG - Using proactor: IocpProactor
+2025-12-09 19:50:05,702 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-09 19:50:05,703 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-09 19:50:05,703 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-09 19:51:29,303 - DEBUG - Using proactor: IocpProactor
+2025-12-09 19:51:29,574 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-09 19:51:29,574 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-09 19:51:29,574 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-09 19:51:39,569 - INFO - Modelo cargado: ModeloBM25
+2025-12-09 19:51:41,083 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-09 19:51:41,083 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 19:51:41,083 - DEBUG - Llamando a ModeloBM25.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-09 19:51:41,180 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 19:51:41,181 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 19:51:52,866 - INFO - Modelo cargado: ModeloVectorialTfIdf
+2025-12-09 19:51:54,808 - DEBUG - Iniciando búsqueda con consulta: 'What are the treatments for Prostate Cancer' y k=5
+2025-12-09 19:51:54,809 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-09 19:51:54,809 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What are the treatments for Prostate Cancer', k=5)
+2025-12-09 19:51:54,939 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 19:51:54,940 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 19:52:15,934 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) High Blood Cholesterol' y k=5
+2025-12-09 19:52:15,934 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-09 19:52:15,934 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) High Blood Cholesterol', k=5)
+2025-12-09 19:52:16,046 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 19:52:16,047 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 19:52:45,371 - DEBUG - Using proactor: IocpProactor
+2025-12-09 19:52:45,629 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-09 19:52:45,629 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-09 19:52:45,630 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-09 19:52:55,741 - INFO - Modelo cargado: ModeloBinario
+2025-12-09 19:52:57,575 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Breast Cancer' y k=5
+2025-12-09 19:52:57,575 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-09 19:52:57,575 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) Breast Cancer', k=5)
+2025-12-09 19:52:57,616 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-09 19:52:57,617 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:02:44,085 - DEBUG - Using proactor: IocpProactor
+2025-12-09 20:02:44,617 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-09 20:02:44,617 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-09 20:02:44,617 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-09 20:03:01,367 - INFO - Modelo cargado: ModeloBinario
+2025-12-09 20:09:59,903 - DEBUG - Using proactor: IocpProactor
+2025-12-09 20:11:22,718 - DEBUG - Using proactor: IocpProactor
+2025-12-09 20:11:23,099 - INFO - Mapeo Qrels cargado rápidamente: 18 preguntas clave.
+2025-12-09 20:11:23,099 - INFO - Corpus cargado con éxito desde 'corpus.csv': 8078 documentos totales
+2025-12-09 20:11:23,099 - DEBUG - Columnas del Corpus: ['Question', 'Answer', 'topic']
+2025-12-09 20:11:35,826 - INFO - Modelo cargado: ModeloBinario
+2025-12-09 20:11:37,566 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) High Blood Cholesterol' y k=5
+2025-12-09 20:11:37,566 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-09 20:11:37,566 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) High Blood Cholesterol', k=5)
+2025-12-09 20:11:37,703 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-09 20:11:37,704 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:11:45,190 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Parkinson's Disease' y k=5
+2025-12-09 20:11:45,190 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-09 20:11:45,191 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) Parkinson's Disease', k=5)
+2025-12-09 20:11:45,192 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-09 20:11:45,192 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:11:50,318 - INFO - Modelo cargado: ModeloVectorialTfIdf
+2025-12-09 20:11:53,015 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Parkinson's Disease' y k=5
+2025-12-09 20:11:53,015 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-09 20:11:53,015 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) Parkinson's Disease', k=5)
+2025-12-09 20:11:53,157 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 20:11:53,159 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:12:07,983 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-09 20:12:07,984 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-09 20:12:07,984 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('cancer', k=5)
+2025-12-09 20:12:08,095 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 20:12:08,096 - DEBUG - 6 líneas finales formateadas.
+2025-12-09 20:38:31,569 - DEBUG - Iniciando búsqueda con consulta: 'cancer' y k=5
+2025-12-09 20:38:31,570 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-09 20:38:31,570 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('cancer', k=5)
+2025-12-09 20:38:31,622 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 20:38:31,623 - DEBUG - 6 líneas finales formateadas.
+2025-12-09 20:38:40,432 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Colorectal Cancer' y k=5
+2025-12-09 20:38:40,433 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-09 20:38:40,433 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) Colorectal Cancer', k=5)
+2025-12-09 20:38:40,546 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 20:38:40,547 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:39:25,469 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) High Blood Pressure' y k=5
+2025-12-09 20:39:25,470 - DEBUG - Modelo en uso: ModeloVectorialTfIdf
+2025-12-09 20:39:25,470 - DEBUG - Llamando a ModeloVectorialTfIdf.buscar('What is (are) High Blood Pressure', k=5)
+2025-12-09 20:39:25,590 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 20:39:25,591 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:39:33,921 - INFO - Modelo cargado: ModeloBM25
+2025-12-09 20:39:35,552 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) High Blood Pressure' y k=5
+2025-12-09 20:39:35,553 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 20:39:35,553 - DEBUG - Llamando a ModeloBM25.buscar('What is (are) High Blood Pressure', k=5)
+2025-12-09 20:39:35,580 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 20:39:35,580 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:39:58,600 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Leukemia' y k=5
+2025-12-09 20:39:58,601 - DEBUG - Modelo en uso: ModeloBM25
+2025-12-09 20:39:58,601 - DEBUG - Llamando a ModeloBM25.buscar('What is (are) Leukemia', k=5)
+2025-12-09 20:39:58,607 - DEBUG - Resultado obtenido: tipo=<class 'list'>, len=5
+2025-12-09 20:39:58,621 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:40:08,108 - INFO - Modelo cargado: ModeloBinario
+2025-12-09 20:40:09,814 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Leukemia' y k=5
+2025-12-09 20:40:09,815 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-09 20:40:09,815 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) Leukemia', k=5)
+2025-12-09 20:40:09,817 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-09 20:40:09,819 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:40:15,773 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Prostate Cancer' y k=5
+2025-12-09 20:40:15,773 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-09 20:40:15,773 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) Prostate Cancer', k=5)
+2025-12-09 20:40:15,774 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-09 20:40:15,775 - DEBUG - 7 líneas finales formateadas.
+2025-12-09 20:40:22,556 - DEBUG - Iniciando búsqueda con consulta: 'What is (are) Skin Cancer' y k=5
+2025-12-09 20:40:22,556 - DEBUG - Modelo en uso: ModeloBinario
+2025-12-09 20:40:22,556 - DEBUG - Llamando a ModeloBinario.buscar('What is (are) Skin Cancer', k=5)
+2025-12-09 20:40:22,557 - DEBUG - Resultado obtenido: tipo=<class 'numpy.ndarray'>, len=5
+2025-12-09 20:40:22,571 - DEBUG - 7 líneas finales formateadas.

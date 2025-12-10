@@ -1,242 +1,274 @@
 from typing import List, Tuple
 from pathlib import Path
+import numpy as np
+from math import log2
+# Importaciones relativas a los archivos que ya hemos creado/discutido
 from .loadmodel import cargarModelo
-from .corpus_loader import get_corpus
+from .corpus_loader import obtenerCorpus
 import logging
 
 # Configurar logging
-log_file = Path(__file__).resolve().parents[1] / "debug.log"
+# La ruta del archivo de log se resuelve dos niveles arriba (proyecto raíz)
+rutaArchivoLog = Path(__file__).resolve().parents[1] / "debug.log"
 logging.basicConfig(
-    filename=str(log_file),
+    filename=str(rutaArchivoLog),
     level=logging.DEBUG,
     format='%(asctime)s - %(levelname)s - %(message)s'
 )
 logger = logging.getLogger(__name__)
 
+class CalculadorMetricas:
+    """Calcula las métricas de Precisión, Exhaustividad (Recall) y MAP."""
 
-class ModelBrowser:
-    """Simple bridge to load a pickled model and run searches.
+    @staticmethod
+    def calcularPrecisionK(documentosRecuperados: List[int], documentosRelevantes: List[int], k: int) -> float:
+        """ Calcula Precisión @ k (P@k) """
+        if not documentosRecuperados:
+            return 0.0
+        
+        recuperadosK = set(documentosRecuperados[:k])
+        relevantes = set(documentosRelevantes)
+        
+        # Número de documentos relevantes recuperados entre los top K
+        relevantesRecuperados = len(recuperadosK.intersection(relevantes))
+        
+        return relevantesRecuperados / k
 
-    The class is intentionally minimal: it attempts to call the model's
-    `buscar` method. It supports models that return either a list of
-    (doc_id, score) tuples (TF-IDF / BM25) or an array/list of matching
-    document indices (binary model).
+    @staticmethod
+    def calcularRecallK(documentosRecuperados: List[int], documentosRelevantes: List[int], k: int) -> float:
+        """ Calcula Exhaustividad @ k (R@k) """
+        if not documentosRelevantes:
+            return 0.0
+        
+        recuperadosK = set(documentosRecuperados[:k])
+        relevantes = set(documentosRelevantes)
+        
+        # Número de documentos relevantes recuperados entre los top K
+        relevantesRecuperados = len(recuperadosK.intersection(relevantes))
+        
+        return relevantesRecuperados / len(relevantes)
+    
+    @staticmethod
+    def calcularMAP(documentosRecuperados: List[int], documentosRelevantes: List[int]) -> float:
+        """ Calcula Precisión Media Promedio (MAP) """
+        precisiones = []
+        numRelevantesEncontrados = 0
+        
+        relevantes = set(documentosRelevantes)
+        
+        for i, idDoc in enumerate(documentosRecuperados):
+            if idDoc in relevantes:
+                numRelevantesEncontrados += 1
+                # Precision en la posición i+1
+                precisionEnK = numRelevantesEncontrados / (i + 1)
+                precisiones.append(precisionEnK)
+
+        if not documentosRelevantes or not precisiones:
+            return 0.0
+        
+        # MAP es la suma de las precisiones en cada posición relevante, dividida por el total de relevantes
+        return sum(precisiones) / len(documentosRelevantes)
+
+class NavegadorModelos:
+    """Clase puente simple para cargar un modelo serializado (.pkl) y ejecutar búsquedas.
+
+    La clase es intencionalmente mínima: intenta llamar al método `buscar` del modelo.
+    Soporta modelos que retornan:
+    1. Una lista de tuplas (id_doc, score) (TF-IDF / BM25).
+    2. Un array/lista de índices de documentos coincidentes (Modelo Binario).
     """
 
     def __init__(self) -> None:
-        self.model = None
-        self.model_path = None
+        """Inicializa el navegador de modelos."""
+        self.modelo = None
+        self.rutaModelo = None
 
-        # Resolve project root (two levels up from this file: controllers/ -> project root)
-        self.root = Path(__file__).resolve().parents[1]
+        # Resolver la raíz del proyecto (dos niveles arriba de controllers/)
+        self.raizProyecto = Path(__file__).resolve().parents[1]
 
-    def load(self, path: str) -> Tuple[bool, str]:
-        """Carga un archivo pickle usando cargarModelo.
+    def cargar(self, ruta: str) -> Tuple[bool, str]:
+        """Carga un archivo pickle usando la función global cargarModelo.
         
-        Retorna (éxito, mensaje).
+        Args:
+            ruta: Ruta del archivo .pkl a cargar.
+            
+        Retorna:
+            Tuple[bool, str]: (éxito, mensaje de estado).
         """
         # Convertir a ruta absoluta
-        abs_path = Path(path).resolve()
+        rutaAbsoluta = Path(ruta).resolve()
         
         # Verificar que el archivo existe
-        if not abs_path.exists():
-            return False, f"El archivo no existe: {abs_path}"
+        if not rutaAbsoluta.exists():
+            mensaje = f"El archivo no existe: {rutaAbsoluta}"
+            logger.error(mensaje)
+            return False, mensaje
         
-        modelo = cargarModelo(str(abs_path))
+        modelo = cargarModelo(str(rutaAbsoluta))
         if modelo is None:
-            return False, f"No se pudo cargar el modelo desde: {abs_path}"
+            mensaje = f"No se pudo cargar el modelo desde: {rutaAbsoluta}"
+            logger.error(mensaje)
+            return False, mensaje
 
-        self.model = modelo
-        self.model_path = str(abs_path)
-        return True, f"Modelo cargado: {type(modelo).__name__}"
+        self.modelo = modelo
+        self.rutaModelo = str(rutaAbsoluta)
+        
+        nombreClase = type(modelo).__name__
+        mensaje = f"Modelo cargado: {nombreClase}"
+        logger.info(mensaje)
+        return True, mensaje
 
-    def has_model(self) -> bool:
-        return self.model is not None
+    def tieneModelo(self) -> bool:
+        """Verifica si un modelo ha sido cargado."""
+        return self.modelo is not None
 
-    def list_models(self, models_dir: str = "models") -> List[Path]:
-        """Return a list of Path objects for .pkl files in the project's models directory.
-
-        The `models_dir` is relative to the project root by default.
+    def listarModelos(self, directorioModelos: str = "models") -> List[Path]:
         """
-        folder = (self.root / models_dir).resolve()
-        if not folder.exists() or not folder.is_dir():
+        Retorna una lista de objetos Path para los archivos .pkl en el directorio 'models' del proyecto.
+        """
+        carpeta = (self.raizProyecto / directorioModelos).resolve()
+        if not carpeta.exists() or not carpeta.is_dir():
+            logger.warning(f"Directorio de modelos no encontrado: {carpeta}")
             return []
 
-        pkl_files = sorted(folder.glob("*.pkl"))
-        return pkl_files
+        archivosPkl = sorted(carpeta.glob("*.pkl"))
+        return archivosPkl
 
-    def get_model_path(self, model_type: str, models_dir: str = "models") -> str:
-        """Retorna la ruta del modelo según el tipo (binary, tfidf, bm25).
+    def obtenerRutaModelo(self, tipoModelo: str, directorioModelos: str = "models") -> str:
+        """Retorna la ruta absoluta del modelo según el tipo (binary, tfidf, bm25).
         
         Retorna la ruta absoluta como string, o string vacío si no lo encuentra.
         """
-        folder = (self.root / models_dir).resolve()
-        if not folder.exists() or not folder.is_dir():
+        carpeta = (self.raizProyecto / directorioModelos).resolve()
+        if not carpeta.exists() or not carpeta.is_dir():
             return ""
 
         # Mapeo directo de nombres de archivos (exactos)
-        filename_map = {
+        mapaNombresArchivo = {
             'binary': 'modeloBinario.pkl',
             'tfidf': 'modeloTfIdf.pkl',
             'bm25': 'modeloBM25.pkl'
         }
 
-        model_type_lower = model_type.lower()
-        filename = filename_map.get(model_type_lower)
+        tipoModeloMin = tipoModelo.lower()
+        nombreArchivo = mapaNombresArchivo.get(tipoModeloMin)
         
-        if filename:
-            full_path = folder / filename
-            if full_path.exists():
-                return str(full_path)
+        if nombreArchivo:
+            rutaCompleta = carpeta / nombreArchivo
+            if rutaCompleta.exists():
+                return str(rutaCompleta)
         
         return ""
 
-    def search(self, query: str, k: int = 5) -> List[str]:
+    def buscar(self, consulta: str, k: int = 5) -> List[str]:
         """Ejecuta una búsqueda contra el modelo cargado y retorna strings formateados.
         
-        La lista retornada contiene líneas legibles para mostrar en la UI.
+        Args:
+            consulta: La consulta del usuario.
+            k: Número máximo de resultados a retornar (límite).
+            
+        Retorna:
+            List[str]: Lista de líneas legibles para mostrar en la UI.
         """
-        logger.debug(f"Iniciando búsqueda con query: '{query}'")
+        logger.debug(f"Iniciando búsqueda con consulta: '{consulta}' y k={k}")
         
-        if not self.model:
+        if not self.modelo:
             logger.error("No hay modelo cargado")
             return []
 
-        model_name = type(self.model).__name__
-        logger.debug(f"Modelo en uso: {model_name}")
+        nombreModelo = type(self.modelo).__name__
+        logger.debug(f"Modelo en uso: {nombreModelo}")
         
-        # Intentar llamar a buscar con diferentes firmas de manera más inteligente
-        result = None
+        resultado = None
         
         try:
-            # ModeloBinario solo acepta la consulta
-            if model_name == 'ModeloBinario':
-                logger.debug(f"Llamando a ModeloBinario.buscar('{query}')")
-                result = self.model.buscar(query)
-            else:
-                # ModeloVectorialTfIdf y ModeloBM25 aceptan k
-                logger.debug(f"Llamando a {model_name}.buscar('{query}', k={k})")
-                result = self.model.buscar(query, k)
-                
-            logger.debug(f"Resultado obtenido: tipo={type(result)}, len={len(result) if hasattr(result, '__len__') else 'N/A'}")
+            # Dado que hemos modificado todos los modelos para aceptar 'k',
+            # la llamada es uniforme, lo cual simplifica la lógica.
+            logger.debug(f"Llamando a {nombreModelo}.buscar('{consulta}', k={k})")
+            resultado = self.modelo.buscar(consulta, k)
             
-        except TypeError as e:
-            logger.error(f"TypeError en primera llamada: {e}")
-            # Fallback: intentar sin k
-            try:
-                logger.debug(f"Reintentando sin parámetro k")
-                result = self.model.buscar(query)
-                logger.debug(f"Resultado obtenido (reintento): tipo={type(result)}")
-            except Exception as e2:
-                logger.error(f"Error en reintento: {e2}", exc_info=True)
-                return []
+            logger.debug(f"Resultado obtenido: tipo={type(resultado)}, len={len(resultado) if hasattr(resultado, '__len__') else 'N/A'}")
+            
         except Exception as e:
-            logger.error(f"Error general: {e}", exc_info=True)
+            logger.error(f"Error al ejecutar la búsqueda en {nombreModelo}: {e}", exc_info=True)
             return []
 
-        if result is None:
-            logger.debug("Resultado es None")
-            return []
+        if resultado is None or len(resultado) == 0:
+            return ["No se encontraron resultados relevantes."]
 
-        # Convertir numpy arrays a listas
-        try:
-            import numpy as np
-            if isinstance(result, np.ndarray):
-                logger.debug(f"Convirtiendo numpy array a lista")
-                result = result.tolist()
-        except Exception as e:
-            logger.debug(f"No se pudo convertir numpy array: {e}")
+        # Obtener los IDs de documentos recuperados (limpios de scores)
+        # Esto unifica la forma en que manejamos los resultados de los 3 modelos.
+        idDocumentosRecuperados = []
+        
+        if nombreModelo == 'ModeloBinario':
+            # El Modelo Binario devuelve directamente una lista de IDs (ya limitada a k)
+            idDocumentosRecuperados = [int(i) for i in resultado if isinstance(i, (int, np.integer, float))]
+        
+        elif isinstance(resultado, list) and len(resultado) > 0 and isinstance(resultado[0], (tuple, list)):
+            # TF-IDF / BM25 devuelven una lista de tuplas (id_doc, score)
+            idDocumentosRecuperados = [int(item[0]) for item in resultado]
 
-        logger.debug(f"Tipo después de conversión: {type(result)}, len={len(result) if hasattr(result, '__len__') else 'N/A'}")
-        formatted = []
+        # Aplicar límite K a los IDs (aunque ya debería estar aplicado en la llamada)
+        idDocumentosRecuperados = idDocumentosRecuperados[:k]
 
-        # Prepare corpus-based filtering: only keep docs whose 'Answer' contains all query tokens
-        corpus = get_corpus()
-        tokens = [t.strip().lower() for t in query.split() if t.strip()]
+        # ----------------------------------------------------
+        # --- Lógica de Qrels y Métricas ---
+        # ----------------------------------------------------
+        corpus = obtenerCorpus()
+        documentosRelevantes = corpus.obtenerQrels(consulta)
+        esQrel = len(documentosRelevantes) > 0
+        
+        if esQrel:
+            # Calcular las métricas
+            pK = CalculadorMetricas.calcularPrecisionK(idDocumentosRecuperados, documentosRelevantes, k)
+            rK = CalculadorMetricas.calcularRecallK(idDocumentosRecuperados, documentosRelevantes, k)
+            mapScore = CalculadorMetricas.calcularMAP(idDocumentosRecuperados, documentosRelevantes)
+            
+            # Formato de la primera línea con las métricas
+            lineasFormateadas = [
+                f"✅ Qrel Encontrado: {consulta}",
+                f"📊 Métricas (k={k}): P@{k}={pK:.3f} | R@{k}={rK:.3f} | MAP={mapScore:.3f}"
+            ]
+        else:
+            # Si no es Qrel, solo se muestra la pregunta original (lo que el usuario tipeó)
+            lineasFormateadas = [f"🔍 Búsqueda: {consulta}"]
+        
+        
+        # ----------------------------------------------------
+        # --- Formateo de Resultados ---
+        # ----------------------------------------------------
 
-        def _answer_contains(doc_id: int) -> bool:
-            try:
-                doc = corpus.get_document(int(doc_id))
-                if not doc:
-                    return False
-                # Try common Answer field names
-                answer_text = None
-                for key in ("Answer", "answer"):
-                    if key in doc and isinstance(doc[key], str):
-                        answer_text = doc[key].lower()
-                        break
-                if not answer_text:
-                    return False
-                # Require all tokens to be present in the answer (case-insensitive)
-                for tok in tokens:
-                    if tok not in answer_text:
-                        return False
-                return True
-            except Exception:
-                return False
-
-        # Estilo TF-IDF / BM25: lista de tuplas (doc_id, score)
-        if isinstance(result, list) and len(result) > 0:
-            # Verificar si es lista de tuplas (TF-IDF/BM25)
-            if isinstance(result[0], (tuple, list)) and len(result[0]) >= 2:
-                try:
-                    # Intentar acceder como tupla
-                    _ = result[0][0], result[0][1]
-                    logger.debug("Formato detectado: TF-IDF/BM25 (tuplas con scores)")
-                    # Filter by Answer content
-                    filtered = []
-                    for item in result:
-                        try:
-                            docid = int(item[0])
-                        except Exception:
-                            continue
-                        if tokens:
-                            if _answer_contains(docid):
-                                filtered.append(item)
-                        else:
-                            # No tokens (empty query tokens?) keep all
-                            filtered.append(item)
-
-                    if not filtered:
-                        logger.debug("No TF-IDF/BM25 results pass Answer-column filtering")
-                        return []
-
-                    for item in filtered:
-                        try:
-                            docid = item[0]
-                            score = item[1]
-                            formatted.append(f"Doc {docid} — score: {float(score):.4f}")
-                        except Exception:
-                            formatted.append(str(item))
-                    logger.debug(f"{len(formatted)} resultados formateados (TF-IDF/BM25)")
-                    return formatted
-                except (TypeError, IndexError):
+        # Recorrer los resultados recuperados (IDs y Scores/Nones)
+        for i, idDoc in enumerate(idDocumentosRecuperados):
+            vistaPrevia = corpus.obtenerVistaPreviaDocumento(idDoc, maxCaracteres=50)
+            score = None
+            
+            # Intentar obtener el score si existe (TF-IDF/BM25)
+            if nombreModelo != 'ModeloBinario' and i < len(resultado):
+                 try:
+                    score = resultado[i][1]
+                 except IndexError:
                     pass
+            
+            # Formato de línea única para todos
+            if score is not None:
+                linea = f"Doc {idDoc} — Score: {float(score):.4f} | {vistaPrevia}"
+            else:
+                linea = f"Doc {idDoc}: {vistaPrevia}"
 
-        # Estilo Binary: lista de índices (números)
-        logger.debug("Formateando como índices (Binary)")
-        try:
-            filtered_ids = []
-            for i in result:
-                try:
-                    docid = int(i)
-                except Exception:
-                    continue
-                if tokens:
-                    if _answer_contains(docid):
-                        filtered_ids.append(docid)
-                else:
-                    filtered_ids.append(docid)
+            lineasFormateadas.append(linea)
 
-            if not filtered_ids:
-                logger.debug("No Binary results pass Answer-column filtering")
-                return []
+        logger.debug(f"{len(lineasFormateadas)} líneas finales formateadas.")
+        return lineasFormateadas
 
-            for docid in filtered_ids:
-                formatted.append(f"Doc {int(docid)}")
-            logger.debug(f"{len(formatted)} resultados formateados (Binary)")
-            return formatted
-        except Exception as e:
-            logger.error(f"Error al formatear como índices: {e}", exc_info=True)
-            logger.debug(f"Tipo final de result: {type(result)}")
-            return [str(result)]
+
+# Instancia global del navegador
+_instanciaNavegador = None
+
+
+def obtenerNavegador() -> NavegadorModelos:
+    """Obtiene o crea la instancia global del navegador."""
+    global _instanciaNavegador
+    if _instanciaNavegador is None:
+        _instanciaNavegador = NavegadorModelos()
+    return _instanciaNavegador

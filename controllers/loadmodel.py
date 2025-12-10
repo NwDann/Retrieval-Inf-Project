@@ -41,13 +41,13 @@ def cargarModelo(nombreArchivo):
             unpickler = ModuleMapper(archivoEntrada)
             modeloCargado = unpickler.load()
             
-        print(f"\n✓ Modelo cargado exitosamente desde: {nombreArchivo}")
+        print(f"\nModelo cargado exitosamente desde: {nombreArchivo}")
         return modeloCargado
     except FileNotFoundError:
-        print(f"\n✗ Error: Archivo no encontrado: {nombreArchivo}")
+        print(f"\nError: Archivo no encontrado: {nombreArchivo}")
         return None
     except Exception as e:
-        print(f"✗ Error al cargar el modelo: {e}")
+        print(f"Error al cargar el modelo: {e}")
         import traceback
         traceback.print_exc()
         return None

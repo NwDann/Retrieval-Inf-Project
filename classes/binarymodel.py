@@ -66,52 +66,43 @@ class ModeloBinario:
         print("Matriz de Ocurrencia (Documentos x Términos):")
         print(self.matrizOcurrencia)
 
-    def buscar(self, consulta):
+    def buscar(self, consulta, k=3):
         """
-        Realiza una búsqueda simple: devuelve documentos donde TODOS los términos
-        de la consulta están presentes (operación AND).
+        Realiza una búsqueda simple (AND) y devuelve los primeros k resultados.
         """
-        print(f"\nBuscando: '{consulta}'")
+        print(f"\nBuscando: '{consulta}' con límite k={k}")
         tokensConsulta = self.preProcesar(consulta)
 
         # Máscara binaria para la relevancia: todos los documentos inicialmente relevantes
         relevanciaBooleana = np.ones(len(self.listaDocumentos), dtype=bool)
 
-        terminosEncontrados = []
         terminosNoEncontrados = []
 
         # 1. Aplicar la lógica AND para cada término de la consulta
         for token in tokensConsulta:
             if token in self.vocabulario:
-                terminosEncontrados.append(token)
-                # Obtener la columna (vector) del término de la matriz
                 terminoIndex = self.vocabulario[token]
                 vectorTermino = self.matrizOcurrencia[:, terminoIndex]
 
-                # La relevancia se mantiene SOLO si el término está presente (operación AND)
-                # True AND vectorTermino
+                # Operación AND
                 relevanciaBooleana = relevanciaBooleana & (vectorTermino == 1)
             else:
-                # Si algún término de la consulta no está en el vocabulario,
-                # ningún documento puede ser relevante bajo la lógica AND estricta.
                 terminosNoEncontrados.append(token)
-                relevanciaBooleana[:] = False # No es necesario seguir
+                relevanciaBooleana[:] = False
                 break
 
         # 2. Obtener los índices de los documentos relevantes
         indicesRelevantes = np.where(relevanciaBooleana)[0]
 
-        # 3. Formatear resultados
-        documentosRelevantes = [
-            (self.listaDocumentos[i], self.matrizOcurrencia[i, :])
-            for i in indicesRelevantes
-        ]
+        # 3. Aplicar el límite k
+        # Como es un modelo binario, no hay ranking, simplemente tomamos los primeros 'k'
+        indicesLimitados = indicesRelevantes[:k]
 
-        if not documentosRelevantes:
+        if len(indicesRelevantes) == 0:
             print("No se encontraron documentos relevantes.")
-            if terminosNoEncontrados:
-                 print(f"   (Términos no encontrados en el vocabulario: {', '.join(terminosNoEncontrados)})")
             return []
 
-        print(f"Documentos relevantes encontrados: {len(documentosRelevantes)}")
-        return indicesRelevantes
+        print(f"Documentos relevantes encontrados (total): {len(indicesRelevantes)}")
+        print(f"Documentos retornados (top k={k}): {len(indicesLimitados)}")
+        print(f"Top {k} resultados encontrados (ID):")
+        return indicesLimitados

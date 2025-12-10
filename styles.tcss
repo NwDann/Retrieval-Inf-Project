@@ -1,0 +1,116 @@
+/* styles.tcss */
+
+/* --- LAYOUT GENERAL --- */
+App {
+    layout: vertical;
+    width: 100%;
+    height: 100%;
+}
+
+Header {
+    dock: top;
+    height: 1;
+    color: white; 
+    background: #005f5f; 
+}
+
+Footer {
+    dock: bottom;
+    height: 1;
+    background: #1e1e1e;
+}
+
+/* El widget Navegador ahora usará layout vertical para apilar los bloques */
+Navegador {
+    layout: vertical; /* ¡El cambio principal! */
+    padding: 1 2; 
+    height: 100%;
+}
+
+/* --- BLOQUE 1: Selección de Modelo (Horizontal en el CSS) --- */
+.selector_modelos {
+    /* Usaremos Horizontal para poner los botones en línea */
+    layout: horizontal; 
+    height: auto;
+    width: auto;
+    margin-bottom: 2;
+    padding-bottom: 1;
+    border-bottom: solid #44475a; 
+}
+
+/* Estilos para los botones de modelo (dentro de .selector_modelos) */
+.selector_modelos Button {
+    margin-right: 2; /* Espacio entre botones */
+    background: #44475a;
+    color: #f8f8f2;
+    width: 1fr; /* Ocupan una fracción del espacio disponible */
+}
+
+.selector_modelos #etiqueta_modelo_seleccionado {
+    margin-left: 2;
+    width: auto; /* Dejar que ocupe el ancho necesario */
+    height: 1;
+    color: #50fa7b; 
+}
+
+
+/* --- BLOQUE 2: SECCIÓN DE QREL --- */
+.qrel_container {
+    layout: vertical;
+    padding-bottom: 1;
+    height: auto;
+    margin-bottom: 1;
+}
+
+/* --- BLOQUE 3: CONTROLES DE BÚSQUEDA (Horizontal) --- */
+.controles_busqueda_horizontal { /* Nuevo nombre de clase */
+    layout: horizontal;
+    height: 4; /* Altura fija para la barra de búsqueda */
+    width: 100%;
+    align: left middle;
+    margin-bottom: 1;
+}
+
+/* Contenedor K (Pequeño, ancho fijo) */
+.k_input_container {
+    width: 10; /* Ancho fijo para K */
+    height: 100%;
+    margin-right: 2;
+}
+
+/* Campo de búsqueda (Toma el resto del espacio) */
+#entrada_busqueda {
+    width: 1fr; /* Ocupa el espacio restante horizontal */
+    height: 3;
+    margin-right: 2;
+    border: solid #bd93f9; 
+    background: #282a36;
+    color: white;
+}
+
+/* Botón Buscar (Ancho fijo) */
+#buscar_boton {
+    width: 12;
+    height: 3;
+    background: #bd93f9; 
+    color: black;
+}
+
+/* --- BLOQUE 4: LISTA DE RESULTADOS --- */
+#lista_resultados {
+    /* Ya que el padre es vertical, esto toma el espacio restante automáticamente */
+    height: 1fr; 
+    width: 100%;
+    border-top: heavy #44475a;
+    margin-top: 1;
+}
+
+SearchResult {
+    height: auto;
+    width: 100%;
+    padding: 0 1;
+}
+
+.qrel_info {
+    color: #ffb86c; 
+}
